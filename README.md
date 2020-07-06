@@ -1,1 +1,1 @@
-# innovation-challenge-flask
+# Serve machine learning model via flask
