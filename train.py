@@ -9,6 +9,7 @@ import pickle
 def train():
     # load data
     iris_dataset = load_iris()
+    # show iris data https://www.kaggle.com/uciml/iris
 
     data = iris_dataset["data"]
     feature_names = iris_dataset["feature_names"]
