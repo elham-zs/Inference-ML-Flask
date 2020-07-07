@@ -32,6 +32,7 @@ curl --location --request POST 'http://127.0.0.1:5000/predict' \
 ## Run locally
 First you need to create the model(classifier) and then run the flask server. 
 ```bash
+pip install -r requirements.txt
 python3 train.py
 python3 inference.py
 ```
