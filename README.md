@@ -29,16 +29,16 @@ curl --location --request POST 'http://127.0.0.1:5000/predict' \
 '
 ```
 to kill your docker that not run anymore on your system
-```bash
-docker ps
-docker kill CONTAINER
+```console
+foo@bar:~$ docker ps
+foo@bar:~$ docker kill CONTAINER
 ```
 
 ## Run locally
 In order to run the code locally, need first to install required library inside requirements.txt. Then, you need to create the model(classifier) and then run the flask server. 
-```bash
-pip install -r requirements.txt
-python3 train.py
-python3 inference.py
+```console
+foo@bar:~$ pip install -r requirements.txt
+foo@bar:~$ python3 train.py
+foo@bar:~$ python3 inference.py
 ```
 after running the inference.py, the flask serve runs and just to send the request by postman or by curl command as mentioned above.
