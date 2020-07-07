@@ -15,13 +15,15 @@ def load_classifier():
     return clf, features
 
 
+clf, features = load_classifier()
+class_name = ['setosa', 'versicolor', 'virginica']
+
 app = Flask(__name__)
 
 
 @app.route('/predict', methods=['POST'])
 def inference():
-    clf, features = load_classifier()
-    class_name = ['setosa', 'versicolor', 'virginica']
+
     resp = {}
 
     content = request.json
