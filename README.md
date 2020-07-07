@@ -6,7 +6,7 @@ To run code  with docker, first must be run the command as follows and then can 
 foo@bar:~$ docker build -t inference .
 foo@bar:~$ docker run -d -p 5000:5000 inference
 ```
-if there is no postman, you can use curl to get the response.
+if there is no postman in your local machine, you can use curl to send your POST request.
 here is the curl command:
 ```
 curl --location --request POST 'http://127.0.0.1:5000/predict' \
