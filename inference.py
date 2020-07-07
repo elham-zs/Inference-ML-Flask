@@ -5,7 +5,7 @@ import numpy as np
 import json
 
 
-def load_model():
+def load_classifier():
     with open("iris_classifier", "rb") as f:
         clf = pickle.load(f)
 
@@ -20,7 +20,7 @@ app = Flask(__name__)
 
 @app.route('/predict', methods=['POST'])
 def inference():
-    clf, features = load_model()
+    clf, features = load_classifier()
     class_name = ['setosa', 'versicolor', 'virginica']
     resp = {}
 

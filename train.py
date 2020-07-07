@@ -42,7 +42,7 @@ def train():
 
     test(clf, target_names)
 
-    # save model
+    # save classifier
     with open("iris_classifier", "wb") as f:
         pickle.dump(clf, f)
 

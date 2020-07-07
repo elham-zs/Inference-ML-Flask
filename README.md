@@ -1,5 +1,6 @@
 # Serve machine learning model via flask
 
+## Run with docker
 To run code  with docker, first must be run the command as follows and then can be use [postman](https://github.com/elham-zs/Inference-ML-Flask/blob/master/online-inference-innovaton.postman_collection.json) in the repo to send the post request
 ```console
 foo@bar:~$ docker build -t inference .
@@ -28,3 +29,10 @@ curl --location --request POST 'http://127.0.0.1:5000/predict' \
  
 '
 ```
+## Run locally
+First you need to create the model(classifier) and then run the flask server. 
+```bash
+python3 train.py
+python3 inference.py
+```
+After running the inference.py, the flask serve runs and just to send the request by postman or by curl command.
