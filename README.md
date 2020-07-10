@@ -42,3 +42,14 @@ foo@bar:~$ python3 train.py
 foo@bar:~$ python3 inference.py
 ```
 after running the inference.py, the flask serve runs and just to send the request by postman or by curl command as mentioned above.
+
+## Run in Cloud Foundry
+To run the code on cloud foundry, just need to run the following command:
+
+```console
+foo@bar:~$ cf login
+foo@bar:~$ cf push
+```
+Just be sure that the name that you used is unique, just change the name in manifest.yml if you used the shared space.
+
+and in order to use it, just in curl or postman must change the url to https://<YOUR-CF-URL>/predict
