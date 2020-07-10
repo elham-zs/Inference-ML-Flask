@@ -50,6 +50,6 @@ To run the code on cloud foundry, just need to run the following command:
 foo@bar:~$ cf login
 foo@bar:~$ cf push
 ```
-Just be sure that the name that you used is unique, just change the name in manifest.yml if you used the shared space.
+Just be sure that the name that you used is unique, just change the name of ml-flask to your desired name in [manifest.yml](https://github.com/elham-zs/Inference-ML-Flask/blob/master/manifest.yml) if you used the shared space.
 
 and in order to use it, just in curl or postman must change the url to https://<YOUR-CF-URL>/predict
