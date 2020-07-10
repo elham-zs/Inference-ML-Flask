@@ -3,6 +3,7 @@ from flask import Flask
 from flask import request
 import numpy as np
 import json
+import os
 
 
 def load_classifier():
@@ -19,6 +20,7 @@ clf, features = load_classifier()
 class_name = ['setosa', 'versicolor', 'virginica']
 
 app = Flask(__name__)
+port = int(os.getenv('PORT', '5000'))
 
 
 @app.route('/predict', methods=['POST'])
@@ -40,4 +42,4 @@ def inference():
 
 
 if __name__ == '__main__':
-    app.run(debug=True, host='0.0.0.0')
+    app.run(debug=True, host='0.0.0.0', port=port)

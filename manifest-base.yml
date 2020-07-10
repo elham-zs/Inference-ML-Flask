@@ -1,0 +1,6 @@
+memory: 512M
+disk_quota: 1G
+timeout: 180
+instances: 1
+buildpack: https://github.com/cloudfoundry/python-buildpack
+command:  python inference.py

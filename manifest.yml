@@ -1,0 +1,3 @@
+inherit: manifest-base.yml
+applications:
+- name: ml-flask
