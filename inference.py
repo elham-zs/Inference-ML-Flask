@@ -37,6 +37,7 @@ def inference():
             test_data.append(elem[feature])
         species = clf.predict(np.array([test_data]))
         resp.update({"input {}".format(i):class_name[species[0]]})
+#     print("done")
 
     return json.dumps(resp, indent=4)
 
